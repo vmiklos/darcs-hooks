@@ -61,8 +61,7 @@ def callback(patch):
 					if pkg not in pkgs:
 						pkgs.append(pkg)
 	for i in pkgs:
-		#server.request_build(config.server_user, config.server_pass, i)
-		pass
+		server.request_build(config.server_user, config.server_pass, i)
 
 if __name__ == "__main__":
 	def getxml(cmd):
