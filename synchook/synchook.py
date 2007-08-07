@@ -17,13 +17,14 @@ def getpatch(hash):
 def tobuild(pkg):
 	ret = []
 	# Build the command to read the FrugalBuilds
-	command = 'source /usr/lib/frugalware/fwmakepkg'
-	command += ' ; source %s'
+	command = 'cd %s'
+	command += '; source /usr/lib/frugalware/fwmakepkg'
+	command += ' ; source FrugalBuild'
 	command += ' ; [ -n "${nobuild}" ] && exit'
 	command += ' ; echo ${options[@]} | grep -q nobuild && exit'
 	command += ' ; echo "${pkgname}-${pkgver}-${pkgrel}"'
 	command += ' ; echo "${archs[@]}"'
-	sock = os.popen(command % pkg)
+	sock = os.popen(command % os.path.split(pkg)[0])
 	lines = sock.readlines()
 	sock.close()
 	if not len(lines):
