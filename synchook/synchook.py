@@ -48,6 +48,7 @@ def callback(patch):
 		print "repos is '%s', exiting" % repo
 		return
 	hash = saxutils.unescape(patch.attributes['hash'].firstChild.toxml())
+	author = saxutils.unescape(patch.attributes['author'].firstChild.toxml())
 	patchdata = getpatch(hash)
 	server = xmlrpclib.Server(config.server_url)
 	pkgs = []
@@ -58,7 +59,7 @@ def callback(patch):
 			if re.match("^source/[^/]+/[^/]+/FrugalBuild$", file):
 				for j in tobuild(file):
 					# hardwiring this is ugly
-					pkg = "darcs://%s/%s" % (repo.replace("frugalware-0.6", "stable"), j)
+					pkg = "darcs://%s/%s/%s" % (repo.replace("frugalware-0.6", "stable"), j, author)
 					if pkg not in pkgs:
 						pkgs.append(pkg)
 	for i in pkgs:
