@@ -35,7 +35,7 @@ See the `/config.py` file to enable/disable plugins. See the
 == Download
 
 ----
-darcs get http://vmiklos.hu/project/darcs-hook
+darcs get http://vmiklos.hu/project/darcs-hooks
 ----
 
 should be able to download the code.
