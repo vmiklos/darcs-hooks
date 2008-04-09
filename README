@@ -1,0 +1,39 @@
+= Hooks for Darcs
+Miklos Vajna <vmiklos@vmiklos.hu>
+
+== What's darcs-hooks?
+
+darcs-hooks is a framework for link:http://darcs.net/[darcs] hooks. you
+can write plugins for it, configure them and each plugin will be invoked
+once for each pushed patch.
+
+== Why is it good?
+
+The posthook feature of darcs allows you to run 'one' command 'once'
+when you push something to the repo. darcs-hooks allows you to run
+several commands 'for each pushed patch', no matter if you pushed one or
+several ones.
+
+Currently darcs-hooks contains a link:http://cia.vc/[CIA] notifier
+plugin, a mail sender plugin and a plugin for
+link:http://ftp.frugalware.org/pub/other/pacman-tools/[Frugalware's
+syncpkgd].
+
+== How does it work?
+
+All you need is to append the following two lines to your
+`_darcs/prefs/defaults` file inside your repository:
+
+----
+apply posthook python /path/to/darcs-hooks/darcs-hooks.py
+apply run-posthook
+----
+
+See the `/config.py` file to enable/disable plugins. See the
+`/foo/config.py` files to fine-tune a given plugin.
+
+Enjoy!
+
+Back to my link:/projects[projects page].
+
+// vim: ft=asciidoc
