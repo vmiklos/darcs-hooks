@@ -6,7 +6,7 @@ from xml.dom import minidom
 from config import config
 
 __version__ = "0.1.0"
-__url__ = "http://ftp.frugalware.org/pub/other/darcs-hooks"
+__url__ = "http://vmiklos.hu/project/darcs-hooks"
 
 def getpatch(hash):
 	sock = gzip.GzipFile(os.path.join("_darcs", "patches", "%s") % hash)
@@ -58,8 +58,7 @@ def callback(patch):
 			file = re.sub(r"^hunk (.*) [0-9]+", r"\1", i)
 			if re.match("^source/[^/]+/[^/]+/FrugalBuild$", file):
 				for j in tobuild(file):
-					# hardwiring this is ugly
-					pkg = "darcs://%s/%s/%s" % (repo.replace("frugalware-0.6", "stable"), j, author)
+					pkg = "darcs://%s/%s/%s" % (repo, j, author)
 					if pkg not in pkgs:
 						pkgs.append(pkg)
 	for i in pkgs:

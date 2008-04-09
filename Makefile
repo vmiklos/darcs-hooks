@@ -1,6 +1,6 @@
 # Makefile for darcs-hooks
 #
-# Copyright (C) 2007 Miklos Vajna <vmiklos@frugalware.org>
+# Copyright (C) 2007 Miklos Vajna <vmiklos@vmiklos.hu>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -45,8 +45,7 @@ clean:
 dist:
 	darcs changes >_darcs/pristine/Changelog
 	darcs dist -d darcs-hooks-$(VERSION)
-	gpg --comment "See http://ftp.frugalware.org/pub/README.GPG for info" \
-		-ba -u 20F55619 darcs-hooks-$(VERSION).tar.gz
+	gpg -ba darcs-hooks-$(VERSION).tar.gz
 	mv darcs-hooks-$(VERSION).tar.gz{,.asc} ../
 	rm _darcs/pristine/Changelog
 

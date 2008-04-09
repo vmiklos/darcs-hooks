@@ -5,7 +5,7 @@ from xml.sax import saxutils
 from config import config
 
 __version__ = "0.1.0"
-__url__ = "http://ftp.frugalware.org/pub/other/darcs-hooks"
+__url__ = "http://vmiklos.hu/project/darcs-hooks"
 
 def getpatch(hash):
 	sock = gzip.GzipFile(os.path.join("_darcs", "patches", "%s") % hash)
@@ -60,7 +60,7 @@ def callback(patch):
 	<generator>
 		<name>CIA plugin for for darcs-hooks.py</name>
 		<version>%(version)s</version>
-		<url>http://ftp.frugalware.org/pub/other/darcs-hooks</url>
+		<url>http://vmiklos.hu/project/darcs-hooks</url>
 	</generator>
 	<source>
 		<project>%(project)s</project>

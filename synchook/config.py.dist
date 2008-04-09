@@ -8,5 +8,5 @@ class config:
 	server_url = "url"
 	server_user = "synchook-git"
 	server_pass = "pass"
-	repos = ['frugalware-current']
+	repos = ['foo123']
 	archs = ['i686', 'x86_64']
