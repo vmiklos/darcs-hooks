@@ -11,7 +11,7 @@ once for each pushed patch.
 
 The posthook feature of darcs allows you to run 'one' command 'once'
 when you push something to the repo. darcs-hooks allows you to run
-several commands 'for each pushed patch', no matter if you pushed one or
+'several' commands 'for each pushed patch', no matter if you pushed one or
 several ones.
 
 Currently darcs-hooks contains a link:http://cia.vc/[CIA] notifier
