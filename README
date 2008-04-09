@@ -32,6 +32,14 @@ apply run-posthook
 See the `/config.py` file to enable/disable plugins. See the
 `/foo/config.py` files to fine-tune a given plugin.
 
+== Download
+
+----
+darcs get http://vmiklos.hu/project/darcs-hook
+----
+
+should be able to download the code.
+
 Enjoy!
 
 Back to my link:/projects[projects page].
