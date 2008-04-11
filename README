@@ -7,6 +7,10 @@ darcs-hooks is a framework for link:http://darcs.net/[darcs] hooks. you
 can write plugins for it, configure them and each plugin will be invoked
 once for each pushed patch.
 
+As I no longer use darcs these days, it's kind of unmaintained but as
+far as I know it still works properly with the latest stable version of
+darcs.
+
 == Why is it good?
 
 The posthook feature of darcs allows you to run 'one' command 'once'
