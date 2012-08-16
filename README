@@ -39,13 +39,13 @@ See the `/config.py` file to enable/disable plugins. See the
 == Download
 
 ----
-darcs get http://vmiklos.hu/project/darcs-hooks
+git clone https://github.com/vmiklos/darcs-hooks.git
 ----
 
 should be able to download the code.
 
 Enjoy!
 
-Back to my link:/projects[projects page].
+Back to my https://github.com/vmiklos[projects page].
 
 // vim: ft=asciidoc
